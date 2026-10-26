@@ -301,6 +301,7 @@ INLINE = re.compile(
     r"(?P<code>`[^`]+`)"
     r"|(?P<bold>\*\*(?P<bold_in>.+?)\*\*)"
     r"|(?P<ital>(?<![\w*])\*(?P<ital_in>\S(?:[^*]*?\S)?)\*(?![\w*]))"
+    r"|(?P<cite>\[(?P<cite_in>\d{1,2}(?:,\s*\d{1,2})*)\])"
     r"|(?P<author>\[AUTHOR:[^\]]*\])"
     r"|(?P<tag>\[(?:" + "|".join(STATUS_TAGS) + r")\])"
     r"|(?P<url>https?://[^\s<>\]\)\"]+)"
@@ -323,6 +324,8 @@ def inline_runs(doc: Doc, text: str, *, size: int | None = None, bold: bool = Fa
             out.append(inline_runs(doc, m.group("bold_in"), size=size, bold=True, italic=italic, highlight=highlight))
         elif m.group("ital"):
             out.append(inline_runs(doc, m.group("ital_in"), size=size, bold=bold, italic=True, highlight=highlight))
+        elif m.group("cite"):
+            out.append(run(m.group("cite_in"), size=size, bold=bold, italic=italic, highlight=highlight, superscript=True))
         elif m.group("author"):
             doc.author_notes.append(m.group("author"))
             inner = m.group("author")[len("[AUTHOR:") : -1]

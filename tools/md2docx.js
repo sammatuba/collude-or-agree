@@ -15,13 +15,14 @@ const lines = md.split("\n");
 const FONT = "Calibri", MONO = "Consolas", PAGE_W = 9360;
 function runs(text, base = {}) {
   const out = [];
-  const re = /(\*\*[^*]+\*\*|`[^`]+`|\*[^*\s][^*]*\*)/g;
+  const re = /(\*\*[^*]+\*\*|`[^`]+`|\*[^*\s][^*]*\*|\[\d{1,2}(?:,\s*\d{1,2})*\])/g;
   let last = 0, m;
   while ((m = re.exec(text))) {
     if (m.index > last) out.push(new TextRun({ text: text.slice(last, m.index), font: FONT, ...base }));
     const t = m[0];
     if (t.startsWith("**")) out.push(new TextRun({ text: t.slice(2, -2), bold: true, font: FONT, ...base }));
     else if (t.startsWith("`")) out.push(new TextRun({ text: t.slice(1, -1), font: MONO, size: 19, ...base }));
+    else if (t.startsWith("[")) out.push(new TextRun({ text: t.slice(1, -1), superScript: true, font: FONT, ...base }));
     else out.push(new TextRun({ text: t.slice(1, -1), italics: true, font: FONT, ...base }));
     last = m.index + t.length;
   }

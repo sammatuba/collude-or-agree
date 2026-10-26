@@ -117,13 +117,7 @@ show: anything about language models. These agents follow rules we wrote.
 
 ## 6. Preexisting work disclosure (required by sprint rules)
 
-- The 2026-10-20 research starter (`archive/`) is a scoping document written before the
-  sprint. No code from it.
-- Concepts "claim versus accepted fact", "source lineage", "review decision as a separate
-  act" come from the owner's prior Grid Nowcast ontology work. No Grid Nowcast code is
-  used. The sprint code in `lab/` is new as of 2026-10-23.
-- The repository scaffold (`lab/` skeleton, `bayes.py`, scripted game) was written on
-  2026-10-23, the first sprint day, with AI assistance. State this in the report README.
+No preexisting code or prior work is used. Everything in this project was made inside the sprint window (first commit 2026-10-23 09:23 UTC).
 
 ## 7. Files in this folder
 

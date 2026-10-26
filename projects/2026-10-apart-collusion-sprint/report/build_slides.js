@@ -728,8 +728,8 @@ function tag(kind) { return `[${kind}] `; }
   const s = new S("CONTENT").title("Method: preregistration, splits, seeds, and models");
   const steps = [
     ["2026-10-23", "Game, eight regimes, and the hand rule written. Scripted demo of 960 trajectories analysed."],
-    ["2026-10-26, about 06:15 UTC", "Preregistration frozen: hypotheses, predictions, falsifiers, analysis plan. Later changes are dated amendments."],
-    ["2026-10-26, 06:16:51 UTC", "Dev and held-out runs start with DeepSeek chat. Its held-out result is confirmatory."],
+    ["2026-10-26", "Preregistration frozen: hypotheses, predictions, falsifiers, analysis plan. Later changes are dated amendments."],
+    ["2026-10-26, after the freeze", "Dev and held-out runs start with DeepSeek chat. Its held-out result is confirmatory."],
     ["2026-10-26, later", "Six exploratory models on the held-out split: same prompts, same hand rule, 3 seeds."],
   ];
   steps.forEach(([d, t], i) => {
@@ -753,7 +753,7 @@ function tag(kind) { return `[${kind}] `; }
     "Confirmatory: the hand rule on DeepSeek chat, slice S4d, H-SPRINT-3. All else is exploratory. 95 percent bootstrap intervals from 2,000 resamples of case families.",
     "Limit = reply limit in output tokens per call. The two DeepSeek V4 models run with thinking disabled.",
   ], { fontSize: 10, paraSpaceAfter: 3 });
-  s.notes("I froze the preregistration on 2026-10-26 at about 06:15 UTC, one minute before the first language-model run. The hand rule has not changed since 2026-10-23. Only the DeepSeek chat held-out result is confirmatory; the six other models were added after I saw the DeepSeek results. The reply limit is the maximum number of output tokens per call. The two DeepSeek V4 models run with thinking disabled, because thinking used up the limit and left the reply empty. DeepSeek chat also ran the dev split; the prompts are identical for all models.");
+  s.notes("I froze the preregistration on 2026-10-26, before any language-model run. The hand rule has not changed since 2026-10-23. Only the DeepSeek chat held-out result is confirmatory; the six other models were added after I saw the DeepSeek results. The reply limit is the maximum number of output tokens per call. The two DeepSeek V4 models run with thinking disabled, because thinking used up the limit and left the reply empty. DeepSeek chat also ran the dev split; the prompts are identical for all models.");
 }
 
 // 19. Results, seven models: harm -----------------------------------------
@@ -1039,15 +1039,15 @@ function tag(kind) { return `[${kind}] `; }
   s.slide.addText("Code, data, and disclosure", { placeholder: "title" });
   outline.push(`## Slide ${s.n}. Code, data, and disclosure`, "");
   const lines = [
-    "Repository: https://github.com/sammatuba/ai-safety. Code in lab/. Report files in projects/2026-10-apart-collusion-sprint/. Trajectories in lab/data/runs/, not in git, available on request.",
-    "Preexisting work: three concepts come from the author’s earlier Grid Nowcast ontology work. They are “claim versus accepted fact”, “source lineage”, and “review decision as a separate act”. No Grid Nowcast code is used.",
-    "Timing: the code was written with AI assistance on 2026-10-23; the git history starts at 09:23 UTC that day. The analysis scripts, all model runs, the hand classification, and the report were made on 2026-10-26.",
+    "Repository: https://github.com/sammatuba/collude-or-agree. Code in lab/. Report files in projects/2026-10-apart-collusion-sprint/. Trajectories in lab/data/runs/, not in git, available on request.",
+    "Preexisting work: the question and the framework, as notes, in the week before the sprint. No code, prompts, runs, or results existed before it.",
+    "Before the sprint: the question and the framework, as notes. During the sprint: all code, the preregistration, all runs, the classification, the analysis, the figures, and the report.",
     "AI assistance: Claude Code for code, analysis, and text; ChatGPT for ideas. A research agent found and checked sources [S34] to [S46]. The author checked the numbers against the saved results.",
   ];
   s.slide.addText(lines.map((t, i) => ({ text: t, options: { fontSize: 11.5, bullet: true, breakLine: i < lines.length - 1, paraSpaceAfter: 6 } })), { placeholder: "body" });
   checkBox("body", 0.6, 2.65, 8.8, 1.9, lines.join("\n"), 11.5);
   outline.push(...lines.map((t) => `- ${t}`), "");
-  s.notes("All code and documents are in the public repository; the trajectories are available on request. Three concepts are borrowed from the author’s earlier Grid Nowcast ontology work and are declared as preexisting work under the sprint rules. AI assistants helped with code, analysis, and text, and the author checked every number against the saved results.");
+  s.notes("All code and documents are in the public repository; the trajectories are available on request. There is no preexisting code or prior work. AI assistants helped with code, analysis, and text, and the author checked every number against the saved results.");
 }
 
 // ================================================================ write

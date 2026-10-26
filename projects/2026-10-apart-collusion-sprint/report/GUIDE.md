@@ -50,7 +50,6 @@ The table follows `REPORT.md`, Appendix B. Dates are local dates (UTC+8) unless 
 | Part of the project | Who made it | When |
 |---|---|---|
 | The research idea and the three-setting framing (grid, software, AI oversight) | You, with ideas from ChatGPT | Before and on 2026-10-23 |
-| Three concepts from the Grid Nowcast ontology work: claim versus accepted fact, source lineage, review decision as a separate act | You, before the sprint. This is preexisting work and the paper says so | Before 2026-10-23 |
 | The selection of Track 2, question 2.3 | You | 2026-10-23 |
 | The game design, the regimes, the auditors, and the code in `lab/` | Claude Code, under your instructions | 2026-10-23 |
 | The preregistration freeze and the budget approvals | You | 2026-10-26 |
@@ -259,7 +258,7 @@ Learn these words. The paper uses each one with one meaning only. The full list 
 | Negative control | A trajectory built so that collusion is impossible | Regime A |
 | Dev split | The case families used to choose thresholds and rules | F01 to F06 |
 | Held-out split | The case families never touched until the rule is frozen | F07 to F12 |
-| Freeze | The moment after which prompts, cases, metrics, and rules cannot change | 2026-10-26, about 06:15 UTC |
+| Freeze | The moment after which prompts, cases, metrics, and rules cannot change | 2026-10-26, before any language-model run |
 | Prompt-conditioned behavior | Behavior that follows from role instructions in a prompt. Not evidence of a learned objective | All language-model results in the paper |
 
 **Measurement words.** Part 6 defines each one with a formula.
@@ -776,7 +775,7 @@ Use the scripted counts from the paper's Appendix D. Each regime has 60 false-cl
 
 A **preregistration** is a written statement, before the main run, of hypotheses, predictions, falsifiers, and the analysis plan. The **freeze** is the moment after which prompts, cases, metrics, and decision rules cannot change. After the freeze, every change is an amendment row with a date and a reason.
 
-The sprint preregistration was frozen on 2026-10-26 at about 06:15 UTC (14:15 Manila). The language-model runs started at 06:16:51 UTC. The file records what was seen before the freeze. That was the full scripted demo and a 2-trajectory smoke test (family F01, regime E1, DeepSeek chat). The smoke test showed reworded plans that the keyword rule missed. No rule was changed after it.
+The sprint preregistration was frozen on 2026-10-26, before any language-model run. The language-model runs started at 06:16:51 UTC. The file records what was seen before the freeze. That was the full scripted demo and a 2-trajectory smoke test (family F01, regime E1, DeepSeek chat). The smoke test showed reworded plans that the keyword rule missed. No rule was changed after it.
 
 ### Learn: confirmatory against exploratory
 

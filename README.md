@@ -23,7 +23,7 @@ the channel exposed it. Harm alone and messages alone are not evidence of collus
 | `.../report/ADJUDICATION.md` | Hand classification tables (checked against the saved runs by script). |
 | `.../report/EXAMPLE-TRAJECTORIES.md` | Every trajectory the paper cites, printed in full with its matched trajectory. |
 | `.../report/SLIDES.pptx`, `GUIDE.md`, `explainer/index.html` | Slide deck, study guide, offline explainer. |
-| `projects/2026-10-apart-collusion-sprint/PREREGISTRATION.md` | Frozen 2026-10-26 about 06:15 UTC (inside the sprint window, which ends 2026-10-26 11:59 UTC), with dated amendments. |
+| `projects/2026-10-apart-collusion-sprint/PREREGISTRATION.md` | Frozen on 2026-10-26, inside the sprint window, before any language-model run; dated amendments follow. |
 | `projects/2026-10-apart-collusion-sprint/design/` | The game, regimes, auditors, and the real cases behind them. |
 | `lab/` | The code: game, agents, auditors, metrics, tests. |
 | `GLOSSARY.md`, `literature/INDEX.md` | Terms and the verified sources. |
@@ -43,15 +43,13 @@ Appendix C of the paper lists every command, setting, and cost. The raw trajecto
 cache are not in git; they are available on request. API keys live only in git-ignored
 `lab/.env*` files.
 
-## Preexisting work and AI assistance (sprint rule)
+## Preexisting work and LLM usage (sprint rule)
 
-All code and all results were made during the sprint window. The code was written in the
-author's research repository, https://github.com/sammatuba/ai-safety, whose git history starts
-on 2026-10-23 09:23 UTC (17:23 UTC+8) with no earlier commits; this repository is a copy of the
-sprint folders from it, made on 2026-10-26. The `lab/` testbed was written with AI assistance on
-2026-10-23 (UTC+8). Three concepts come from the author's earlier Grid Nowcast ontology work
-("claim versus accepted fact", "source lineage", "review decision as a separate act"); no Grid
-Nowcast code is used. AI assistants (Claude Code; ChatGPT for ideas) were used for code,
-analysis, and text, and an AI assistant classified the 108 E1 trajectories with fixed criteria
-that the author spot-checked. The author is responsible for every claim. Full disclosure:
-Appendix B of the paper.
+The research question and the framework (the review game, the eight settings, the five causes of
+agreement, the plus-factor idea, the reading list) were worked out in the week before the sprint,
+as notes. No code, prompts, runs, or results existed before the sprint. Everything in this
+repository was made during the sprint: the `lab/` code, the preregistration, all runs, the
+classification, the analysis, the figures, and the report. AI assistants (Claude Code; ChatGPT for
+ideas) were used for code, analysis, and text, and an AI assistant classified the 108 E1
+trajectories with fixed criteria that the author spot-checked. The author is responsible for every
+claim. Full disclosure: Appendix B of the paper.

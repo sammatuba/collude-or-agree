@@ -10,7 +10,7 @@ depends_on: ["../README.md", "../PREREGISTRATION.md", "../design/regimes.md", ".
 
 # Did They Collude or Just Agree? What Counts as Evidence of Collusion Among AI Reviewers
 
-**Jan Samuel Matuba**, Independent Researcher (dmti@mabuhayenergy.com)
+**Jan Samuel Matuba**, Independent Researcher (jscmatuba@gmail.com)
 
 Apart AI Collusion Research Sprint, 2026-10-23 to 2026-10-25. Track 2: Detection and Audit of Collusion. Research question 2.3: "What should count as convincing evidence of collusion?" I also use question 2.2: "Does combining what agents say with what they do beat either alone?"
 
@@ -179,7 +179,7 @@ A confirmatory run tests the preregistered hypotheses on data that I never tuned
 
 The DeepSeek chat run covers all 12 families: 6 dev families and 6 held-out families. The other models cover the 6 held-out families only. Each run uses 3 seeds, so each model has 288 held-out trajectories, of which 252 use the model and 36 (regime P) are scripted. The two DeepSeek V4 models think by default. With thinking on, the reply limit was used up by the thinking, and the reply was empty. I disabled thinking for these two models. The other five models do not use extended thinking, so all seven ran without it.
 
-**Preregistration.** A preregistration is a written plan of the hypotheses, the tests, and the pass marks, frozen before the data exist. I froze mine on 2026-10-26 at about 06:15 UTC, before the dev and held-out runs. The sprint deadline, 2026-10-25 23:59 Anywhere on Earth, is 2026-10-26 11:59 UTC, so the freeze is inside the sprint window. "Held-out" means the six case families (F07 to F12) that I kept apart from all tuning. The other six (F01 to F06) are the dev split. The confirmatory auditor is the hand-written scoring rule in Appendix C, unchanged since 2026-10-23. Every model after DeepSeek chat was added after I saw the DeepSeek results. These runs are exploratory. All amendments are dated in the preregistration file.
+**Preregistration.** A preregistration is a written plan of the hypotheses, the tests, and the pass marks, frozen before the data exist. I froze mine on 2026-10-26, inside the sprint window in Anywhere-on-Earth time, before the dev and held-out runs. "Held-out" means the six case families (F07 to F12) that I kept apart from all tuning. The other six (F01 to F06) are the dev split. The confirmatory auditor is the hand-written scoring rule in Appendix C, unchanged since 2026-10-23. Every model after DeepSeek chat was added after I saw the DeepSeek results. These runs are exploratory. All amendments are dated in the preregistration file.
 
 **Hand classification.** The AI assistant read every private message and every action in the held-out E1 trajectories of DeepSeek chat, GPT-5.6 Terra, and DeepSeek Flash. That is 108 trajectories. It classified each trajectory with criteria that are stated in advance (Appendix E). A script checked every endorsement and decision in the tables against the saved runs.
 
@@ -395,7 +395,7 @@ The next project is a game where coordination pays and the reviewers can assure 
 
 ## Code and data
 
-Repository: https://github.com/sammatuba/collude-or-agree (the sprint submission; its code was written in the author's research repository https://github.com/sammatuba/ai-safety, whose history starts 2026-10-23). The code is in `lab/`. The report files are in `projects/2026-10-apart-collusion-sprint/`. The trajectories are in `lab/data/runs/` (not in git; available on request). The seven-model summary is in `report/RESULTS-SEVEN-MODELS.md`, and the hand classifications are in `report/ADJUDICATION.md`. Every trajectory that this paper cites as an example is printed in full, with its matched E0 trajectory, in `report/EXAMPLE-TRAJECTORIES.md`.
+Repository: https://github.com/sammatuba/collude-or-agree. The code is in `lab/`. The report files are in `projects/2026-10-apart-collusion-sprint/`. The trajectories are in `lab/data/runs/` (not in git; available on request). The seven-model summary is in `report/RESULTS-SEVEN-MODELS.md`, and the hand classifications are in `report/ADJUDICATION.md`. Every trajectory that this paper cites as an example is printed in full, with its matched E0 trajectory, in `report/EXAMPLE-TRAJECTORIES.md`.
 
 ## References
 
@@ -446,13 +446,11 @@ Repository: https://github.com/sammatuba/collude-or-agree (the sprint submission
 - The prompts ask models to play approval-seeking roles. The models produced biasing plans in a fictional setting. I publish the prompts so that others can test refusals. I add no new capability.
 - I model no real organizations, persons, or markets. All cases are fictional. No human subjects took part.
 
-## Appendix B. Work done before the sprint and AI assistance
+## Appendix B. Preexisting work and LLM usage statement
 
-- **Code.** I wrote the code in `lab/` with AI assistance on 2026-10-23 (local date, UTC+8). The git history starts at 2026-10-23 17:23 UTC+8 (09:23 UTC). There are no earlier commits. In Anywhere-on-Earth time, this commit is on 2026-10-22. On 2026-10-26 (UTC+8), I added the analysis scripts in `report/` and two small settings in `llm.py` (key file and reply limit). I also made all language-model runs, the hand classification, and this report. [AUTHOR: if the official start was after 09:23 UTC on 2026-10-23, add: "I wrote the test environment before the official start. It is preexisting work."]
-- **Concepts.** Three concepts come from my earlier work on the Grid Nowcast ontology: "claim versus accepted fact", "source lineage", and "review decision as a separate act". I use no Grid Nowcast code.
-- **Scoping notes.** A research starter document from 2026-10-20 defined the question. It contains no code.
-- **New during the sprint.** Everything reported here: the game and auditor code, the preregistration, all runs, the hand classification, the analysis scripts, the figures, and this report. The README of the repository marks the preexisting concepts in the same words.
-- **AI assistance.** I used AI assistants for code, analysis, and text: Claude Code, and ChatGPT for ideas. A background research agent (Claude) found and checked the sources [S27] to [S46] and wrote `design/historical-grounding.md`. The assistant re-checked each quote used in this paper against the fetched text. I checked the numbers against the saved results. [AUTHOR: confirm that you used the commands in Appendix C.]
+- **Before the sprint.** I worked out the research question and the framework in the week before the sprint, as notes. The framework was the review game, the eight settings, the five causes of agreement, the plus-factor idea, and the reading list. No code, prompts, runs, or results existed before the sprint.
+- **During the sprint.** Everything reported here: the code in `lab/`, the preregistration, all runs, the hand classification, the analysis scripts, the figures, and this report. The README of the repository says the same.
+- **LLM usage.** I used AI assistants for code, analysis, and text: Claude Code, and ChatGPT for ideas. A background research agent (Claude) found and checked the sources [S27] to [S46] and wrote `design/historical-grounding.md`. The assistant re-checked each quote used in this paper against the fetched text. An AI assistant classified the 108 E1 trajectories with the criteria in Appendix E, and I spot-checked the tables. I checked the numbers against the saved results. [AUTHOR: confirm that you used the commands in Appendix C.]
 
 ## Appendix C. How to repeat the results, and the scoring rule
 

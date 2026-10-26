@@ -83,4 +83,4 @@ S4; shared source raises false approval rate for naive agents; AUROC known value
 
 ## Preexisting work
 
-All code here was written on or after 2026-10-23 (sprint day 1). No Grid Nowcast code.
+All code here was written on or after 2026-10-23 (sprint day 1).

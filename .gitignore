@@ -1,0 +1,11 @@
+lab/.env
+lab/.env.*
+!lab/.env.example
+lab/.venv/
+lab/data/runs/
+lab/data/cache/
+__pycache__/
+.pytest_cache/
+~$*
+* - Copy.*
+*:Zone.Identifier
